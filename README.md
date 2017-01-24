@@ -8,18 +8,27 @@
 
 4   Install Node Packages. - npm install
 
-5.  Run the app. - npm start -s This will run the automated build process, start up a webserver, and open the application in your default browser. 
+5.  Run the app. - npm start -s Starts the application in dev mode
+
+This will run the automated build process, start up a webserver, and open the application in your default browser. 
 - During development, this command will continue watching files all your files. 
 - Code is rebuilt, linting runs, and tests run automatically. 
 - Note: The -s flag is optional. It enables silent mode which suppresses unnecessary messages during the build.
     
-Notes:
-------
+Development Notes:
+------------------
 
-I have a installed quite a lot of Node Modules because I wanted to use Redux, Thunk etc. (still on a learning curve :-))
+I have a installed quite a lot of Node Modules because I wanted to use Redux, Thunk etc. ( still on a learning curve /:-) )
 
 I also have an actions.js file which I would have loved to use for the ajax call but wanted to simplify things.
 
 ** I have included a screenshot/screen capture of how the page should look (as I noticed it does take sometime for the API call to load ). I could do with a promise and a timeout function :-()
 
 PS: Spending some time on getting the Days to iterate through for the 5 day forecast.
+
+
+Production Build:
+------------------
+
+1: npm run build should run the build for production code using the dist folder. 
+** I currently have issues with some configuration here (sad face)
