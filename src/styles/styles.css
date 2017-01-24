@@ -11,6 +11,15 @@
   margin: 20px 0 0 0;
 }
 
+.header-text {
+  border-bottom: 2px solid #000;
+  padding-bottom: 3px;
+}
+
+.border-separator {
+  border-bottom: 2px solid goldenrod;
+}
+
 a {
   font-size: 16px;
   line-height: 1.6;
