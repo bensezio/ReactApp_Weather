@@ -20,4 +20,6 @@ I have a installed quite a lot of Node Modules because I wanted to use Redux, Th
 
 I also have an actions.js file which I would have loved to use for the ajax call but wanted to simplify things.
 
+** I have included a screenshot/screen capture of how the page should look (as I noticed it does take sometime for the API call to load ). I could do with a promise and a timeout function :-()
+
 PS: Spending some time on getting the Days to iterate through for the 5 day forecast.
