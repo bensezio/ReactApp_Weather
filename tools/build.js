@@ -2,7 +2,7 @@ import webpack from 'webpack';
 import webpackConfig from '../webpack.config.prod';
 import colors from 'colors';
 
-process.env.MODE_ENV = 'production'; // this ensures Babel dev config (for hot reloading) stops working
+process.env.NODE_ENV = 'production'; // this ensures Babel dev config (for hot reloading) stops working
 
 console.log('Generating minified bundle for production via Webpack. This will take a moment..'.blue);
 

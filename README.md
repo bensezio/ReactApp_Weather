@@ -29,4 +29,4 @@ Production Build:
 ------------------
 
 1: npm run build  - should run the build for production code using the dist folder. 
-** I am currently debugging an issue with es-lint-watch
+** Issues with es-lint-watch were resolved following some investigations and debugging
