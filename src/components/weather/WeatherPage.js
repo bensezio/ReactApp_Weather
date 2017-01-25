@@ -30,8 +30,7 @@ class WeatherPage extends React.Component {
         count: data.cnt,
         country: data.city.country,
         lists: data.list,
-        time: data.list.dt,
-        day: data.list.dt
+        time: data.list.dt
       });
     });
   }
@@ -39,31 +38,31 @@ class WeatherPage extends React.Component {
   render() {
     // Converting Datetime 
     
-    // let start = moment([2017, 01, 24;]);
-    // let end = moment([2017, 01, 29]);
     let date = this.state.day;
-    let result = moment(date).format("llll");
+    
       
     // Iterating through list data for weather results
     const lists = this.state.lists.map((list, index) => {
+    let result = moment.unix(list.dt).format("llll");
+
         return (
             <div key={index}>
               
-              <h4>Day: {result}</h4>
+              <h4>{result}</h4>
               
-              <h5 class="label label-primary">Day Temperature: {list['temp']['day']}</h5>
+              <h5>Temperature: Day: {list['temp']['day']} | Night: {list['temp']['night']} | Morning: {list['temp']['morn']}</h5>
 
-              <h5 class="label label-primary">Pressure: {list['pressure']}</h5>
+              <h5><strong>Main:</strong> <i>{list['weather'][0]['main']}</i></h5>
 
-              <h5 class="label label-primary">Humidity: {list['humidity']}</h5>
+              <h5>Humidity: {list['humidity']}</h5>
 
-              <h5 class="label label-primary">Speed: {list['speed']}</h5>
+              <h5>Speed: {list['speed']}</h5>
 
-              <h5 class="label label-primary">Degree: {list['deg']}</h5>
-
-              <h5 class="label label-primary">Clouds: {list['clouds']}</h5>
+              <h5>Clouds: {list['clouds']}</h5>
 
               <strong>Description:</strong> <i>{list['weather'][0]['description']}</i>
+
+              <h5>Icon: <i>{list['weather'][0]['icon']}</i></h5>
             
               <div className="border-separator">&nbsp;</div>
 
@@ -77,7 +76,7 @@ class WeatherPage extends React.Component {
           <div className="header-text">
               <h3>Please await {this.state.country} weather forecast for {this.state.city} ... </h3>
           </div>
-          <blockquote>Forecast for {this.state.count} days</blockquote>
+          <blockquote>Weather Forecast for next {this.state.count} days</blockquote>
         
         <ul>
           <li>{lists}</li>
