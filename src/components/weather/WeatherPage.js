@@ -60,9 +60,7 @@ class WeatherPage extends React.Component {
 
               <h5>Clouds: {list['clouds']}</h5>
 
-              <strong>Description:</strong> <i>{list['weather'][0]['description']}</i>
-
-              <h5>Icon: <i>{list['weather'][0]['icon']}</i></h5>
+              <h5><strong>Description:</strong> <i>{list['weather'][0]['description']}</i> <span><img src="http://openweathermap.org/img/w/10d.png" /></span></h5>
             
               <div className="border-separator">&nbsp;</div>
 
