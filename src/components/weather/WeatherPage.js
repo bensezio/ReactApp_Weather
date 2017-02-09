@@ -20,8 +20,8 @@ class WeatherPage extends React.Component {
 
   componentWillMount() {
     // Called the first time the component is loaded right before the component is added to the Page
-   const url = "http://api.openweathermap.org/data/2.5/forecast/daily?q=London&units=metric,GB&cnt=5&APPID=0347c864d2bf42c0018f6c88f5869e61";
-               
+   const url = "http://api.openweathermap.org/data/2.5/forecast/daily?q=London,GB&units=metric&cnt=5&APPID=0347c864d2bf42c0018f6c88f5869e61";
+
     $.get(url, (data) => {
       this.setState({
         city: data.city.name,
@@ -46,7 +46,7 @@ class WeatherPage extends React.Component {
               
               <h4>{result}</h4> <br />
               
-              <h5><strong>Temperature: Day:</strong> {list['temp']['day']} | Night: {list['temp']['night']} | Morning: {list['temp']['morn']}</h5>
+              <h5><strong>Temperature (ºC): Day:</strong> {list['temp']['day']} | Night: {list['temp']['night']} | Morning: {list['temp']['morn']}</h5>
 
               <h5><strong>Main:</strong> <i>{list['weather'][0]['main']}</i></h5>
 
