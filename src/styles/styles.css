@@ -36,3 +36,11 @@ nav {
 li {
   list-style-type: none;
 }
+
+strong {
+  font-size: 16px;
+}
+
+i {
+  font-size: 13px;
+}
