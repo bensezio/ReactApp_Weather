@@ -11,7 +11,7 @@ class WeatherPage extends React.Component {
     this.state = {
       'city': '',
       'country':"GB",
-      'cnt': 5,
+      'cnt': 0,
       'lists': [],
       'time': '',
       'day': ''
